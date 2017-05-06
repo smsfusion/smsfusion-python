@@ -57,7 +57,7 @@ swagger_client.configuration.api_key['key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # swagger_client.configuration.api_key_prefix['key'] = 'Bearer'
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
+api_instance = swagger_client.HLRApi()
 key = 'key_example' # str | API Key as generated from the <a href='https://www.smsfusion.com.au/admin/api/'>admin panel</a>
 num = 'num_example' # str | A single phone number or <a href='https://www.smsfusion.com.au/help/msisdn/'>MSDISDN</a>
 cc = 'cc_example' # str | 2 character country code <a href='https://en.wikipedia.org/wiki/ISO_3166-2'>ISO 3166-2</a> for formatting local numbers internationally (optional)
@@ -67,18 +67,19 @@ try:
     api_response = api_instance.get_hlr(key, num, cc=cc)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->get_hlr: %s\n" % e)
+    print("Exception when calling HLRApi->get_hlr: %s\n" % e)
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.smsfusion.com.au/*
+All URIs are relative to *https://api.smsfusion.com.au/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**get_hlr**](docs/DefaultApi.md#get_hlr) | **GET** /hlr/ | HLR number lookup
-*DefaultApi* | [**get_hlr_callback**](docs/DefaultApi.md#get_hlr_callback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*HLRApi* | [**get_hlr**](docs/HLRApi.md#get_hlr) | **GET** /hlr/ | HLR number lookup
+*HLRApi* | [**get_hlr_callback**](docs/HLRApi.md#get_hlr_callback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SMSApi* | [**send_sms**](docs/SMSApi.md#send_sms) | **GET** /sms/ | Send an SMS
 
 
 ## Documentation For Models
@@ -87,6 +88,7 @@ Class | Method | HTTP request | Description
  - [HLRError](docs/HLRError.md)
  - [HLRResult](docs/HLRResult.md)
  - [OutOfCredit](docs/OutOfCredit.md)
+ - [SMSResult](docs/SMSResult.md)
 
 
 ## Documentation For Authorization

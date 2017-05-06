@@ -18,9 +18,11 @@ from .models.hlr_callback import HLRCallback
 from .models.hlr_error import HLRError
 from .models.hlr_result import HLRResult
 from .models.out_of_credit import OutOfCredit
+from .models.sms_result import SMSResult
 
 # import apis into sdk package
-from .apis.default_api import DefaultApi
+from .apis.hlr_api import HLRApi
+from .apis.sms_api import SMSApi
 
 # import ApiClient
 from .api_client import ApiClient

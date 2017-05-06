@@ -18,3 +18,4 @@ from .hlr_callback import HLRCallback
 from .hlr_error import HLRError
 from .hlr_result import HLRResult
 from .out_of_credit import OutOfCredit
+from .sms_result import SMSResult
